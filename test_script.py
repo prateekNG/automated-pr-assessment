@@ -5,7 +5,7 @@ import requests
 
 def post_pr_comment(repo_owner, repo_name, pr_number, github_token, comment):
     headers = {
-        "Authorization": f"token {github_token}",
+        "Authorization": f"Bearer {github_token}",
         "Accept": "application/vnd.github.v3+json",
     }
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/issues/{pr_number}/comments"
