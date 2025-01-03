@@ -19,7 +19,7 @@ if __name__ == "__main__":
     REPO_OWNER = os.environ.get("GITHUB_REPO_OWNER")
     REPO_NAME = os.environ.get("GITHUB_REPO_NAME")
     PR_NUMBER = os.environ.get("GITHUB_PR_NUMBER")
-    GITHUB_TOKEN = os.environ.get("GH_TOKEN")
+    GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 
     test_comment = "Hello from the test script! This is a test comment to ensure everything is working correctly."
     post_pr_comment(REPO_OWNER, REPO_NAME, PR_NUMBER, GITHUB_TOKEN, test_comment)
