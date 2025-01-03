@@ -11,6 +11,8 @@ def post_pr_comment(repo_owner, repo_name, pr_number, github_token, comment):
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/issues/{pr_number}/comments"
     payload = {"body": comment}
 
+    print(url)
+
     response = requests.post(url, json=payload, headers=headers)
     if response.status_code != 201:
         print(f"Error posting comment: {response.status_code} and message: {response.text}")
